@@ -18,6 +18,7 @@
     - [Deploying a Microservice in the Provider Cluster](#deploying-a-microservice-in-the-provider-cluster)
     - [Access the Microservice from the Consumer and Provider Cluster](#access-the-microservice-from-the-consumer-and-provider-cluster-1)
     - [Telemetry Data](#telemetry-data)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -298,3 +299,7 @@ Jaeger trace and Kiali dashboards are also available at `http://<consumer-node-i
 
 ![Jaeger](figures/jaeger.png)
 ![Kiali](figures/kiali.png)
+
+## Acknowledgments
+This work was supported by 
+- the European Union's Horizon Europe research project [FLUIDOS](https://fluidos.eu) within the subproject FLUIDOSMESH of 1st Open Call.
