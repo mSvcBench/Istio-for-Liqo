@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: s0
+  name: s0-consumer
+  namespace: fluidosmesh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app-t: s0-consumer
+  template:
+    metadata:
+      labels:
+        app: s0
+        app-t: s0-consumer
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: topology.kubernetes.io/zone
+                operator: In
+                values:
+                - consumer
+      containers:
+      - image: luksa/kubia
+        name: s0
