@@ -1,3 +1,5 @@
+# FLUIDOS Webinar 
+
 ## Cluster config
 - cloud cluster 
 - edge1 cluster
@@ -18,7 +20,7 @@ liqoctl offload namespace fluidosmesh --namespace-mapping-strategy EnforceSameNa
 ```
 
 ## Create the cloud app without istio support
-![app](mubench-app/servicegraph.png)
+![app](servicegraph.png)
 Quickly present k8s manifests for services and deployments.
 Deploy the APP
 
@@ -30,7 +32,7 @@ k apply -f 'mubench-app/affinity-yamls/no-region-specified/cloud/no-subzone-spec
 k get pods -n fluidosmesh -o wide
 ```
 
-## install ingress rule at the edge
+## Install ingress rule at the edge
 ```zsh
 k apply -f 'mubench-app/istio-ingress-s0.yaml' -n fluidosmesh
 ```
